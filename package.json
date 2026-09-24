@@ -1,0 +1,36 @@
+{
+  "name": "tuncay-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 4173",
+    "check": "astro check",
+    "build": "astro check && astro build",
+    "preview": "astro preview --host 0.0.0.0 --port 4173",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@astrojs/react": "7.0.0",
+    "@fontsource-variable/manrope": "^5.2.0",
+    "@fontsource/ibm-plex-mono": "^5.2.0",
+    "astro": "7.3.5",
+    "oxc-transform-react": "^0.145.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/three": "^0.180.0",
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "^1.0.1",
+    "typescript": "^5.9.0"
+  }
+}

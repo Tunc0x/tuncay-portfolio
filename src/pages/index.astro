@@ -1,0 +1,520 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SystemDiagram from '../components/SystemDiagram.astro';
+import { Pipeline, Scheduler, ConceptMap } from '../components/ProjectLab';
+import SpatialLab from '../components/SpatialLab.astro';
+const linkedin = 'https://www.linkedin.com/in/tuncay-%C3%BCnal-4562b6182/';
+const capabilities = [
+  {
+    n: '01',
+    name: 'Backend & data',
+    detail: 'Reliable event flows. Clear contracts.',
+    skills: 'Python · FastAPI · PostgreSQL · SQLAlchemy · REST APIs',
+    project: 'OpsReplay',
+    href: '#opsreplay',
+  },
+  {
+    n: '02',
+    name: 'Full-stack products',
+    detail: 'From data relationships to the details of an interface.',
+    skills: 'TypeScript · React · Next.js · Supabase',
+    project: 'Appointment Scheduler',
+    href: '#scheduler',
+  },
+  {
+    n: '03',
+    name: 'AI & interaction',
+    detail: 'Intelligent systems with the human in view.',
+    skills: 'OpenAI integration · Conversational interaction · HCI',
+    project: 'AI-supported learning',
+    href: '#learning',
+  },
+  {
+    n: '04',
+    name: 'Real-time & delivery',
+    detail: 'Interactive environments. Repeatable deployments.',
+    skills: 'Unity · C# · WebAR · AWS SQS · Docker · Terraform · Git',
+    project: 'Spatial systems',
+    href: '#spatial',
+  },
+];
+---
+
+<Layout>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Tuncay Ünal home">
+      tü<span class="wordmark-dot">.</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#work">Selected work</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="header-contact" href="#contact">
+      Let’s talk <span aria-hidden="true">↗</span>
+    </a>
+  </header>
+  <main id="main">
+    <section class="hero section-wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-topline">
+        <p class="eyebrow">
+          TUNCAY ÜNAL <span>/</span> SOFTWARE ENGINEER
+        </p>
+        <span class="edition mono">SELECTED WORK · 2023—2026</span>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">
+            Complex systems.
+            <br />
+            <span class="muted-word">Considered</span>
+            <br />
+            experiences<span class="accent">.</span>
+          </h1>
+          <p class="hero-intro">
+            I build the systems behind the interface.
+            <br />
+            And the interactions that bring them to life.
+          </p>
+          <p class="hero-disciplines">
+            Backend & full-stack · AI-enabled applications · Real-time 3D
+          </p>
+          <a class="button button-primary" href="#work">
+            Explore my work <span aria-hidden="true">↘</span>
+          </a>
+        </div>
+        <SystemDiagram />
+      </div>
+      <div class="hero-bottom">
+        <p>
+          Software engineering,
+          <br />
+          <span>with a human perspective.</span>
+        </p>
+        <div class="hero-organisations">
+          <span>WORK ACROSS</span>
+          <strong>Lufthansa Technik</strong>
+          <strong>Fraunhofer CML</strong>
+        </div>
+        <a class="scroll-link mono" href="#work">
+          SCROLL TO EXPLORE <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="work" class="work section-wrap" aria-labelledby="work-title">
+      <div class="section-heading">
+        <p class="eyebrow">
+          <span class="section-number">01</span> SELECTED WORK
+        </p>
+        <div>
+          <h2 id="work-title">
+            Different domains.
+            <br />
+            <span class="muted-word">The same curiosity.</span>
+          </h2>
+          <p>
+            From a webhook’s first request to a learner’s next step.
+            <br />A selection of things I’ve built and the decisions behind
+            them.
+          </p>
+        </div>
+        <span class="mono heading-aside">
+          FOUR PERSPECTIVES
+          <br />
+          ON ENGINEERING
+        </span>
+      </div>
+
+      <article class="project project-ops" id="opsreplay">
+        <div class="project-top">
+          <span class="mono">01 / BACKEND & DISTRIBUTED SYSTEMS</span>
+          <span class="project-status">In development</span>
+        </div>
+        <div class="project-intro">
+          <h3>
+            OpsReplay<span class="accent">↗</span>
+          </h3>
+          <div>
+            <h4>See what changed before production broke.</h4>
+            <p>
+              A release and incident intelligence product for small engineering
+              teams. The implemented core turns GitHub push webhooks into
+              chronological repository timelines, preserving where every event
+              came from.
+            </p>
+          </div>
+        </div>
+        <Pipeline client:visible={{ rootMargin: '400px' }} />
+        <div class="project-bottom">
+          <div class="project-evidence">
+            <span>
+              <strong>9</strong> API endpoints
+            </span>
+            <span>
+              <strong>30+</strong> automated API tests
+            </span>
+            <span>
+              <strong>2</strong> background processes
+            </span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Tunc0x/opsreplay">
+              View implementation <span aria-hidden="true">↗</span>
+            </a>
+            <a href="https://opsreplay.pages.dev/">
+              Visit product site <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+        <div class="project-colophon">
+          <p>Python / FastAPI / PostgreSQL / AWS SQS / React / TypeScript</p>
+          <p>
+            More integrations, incident workflows and evidence-backed
+            postmortems are in development.
+          </p>
+        </div>
+      </article>
+
+      <article class="project project-scheduler" id="scheduler">
+        <div class="project-top">
+          <span class="mono">02 / FULL-STACK PRODUCT ENGINEERING</span>
+          <span class="project-status">Prototype</span>
+        </div>
+        <div class="split-project">
+          <div class="project-copy">
+            <h3>
+              A clearer
+              <br />
+              calendar.
+            </h3>
+            <h4>Patient Appointment Scheduler</h4>
+            <p>
+              A full-stack scheduling prototype with month, week and list views.
+              Relational queries keep appointments, patients and categories
+              connected. URL-based state keeps the current view and filters
+              intact across reloads.
+            </p>
+            <div class="engineering-note">
+              <span class="mono">THE ENGINEERING DETAIL</span>
+              <p>
+                Three REST mutation operations, seven validated request fields,
+                and privileged Supabase writes kept on the server.
+              </p>
+            </div>
+            <a class="inline-link" href="https://vocare-scheduler.vercel.app/">
+              Open the live scheduler <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="secondary-link"
+              href="https://github.com/Tunc0x/appointment-scheduler"
+            >
+              Read the source <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <Scheduler client:visible={{ rootMargin: '400px' }} />
+        </div>
+        <div class="project-colophon">
+          <p>Next.js / React / TypeScript / Supabase / TanStack Query / Zod</p>
+          <p>Interactive preview · Sample data</p>
+        </div>
+      </article>
+
+      <article class="project project-learning" id="learning">
+        <div class="project-top">
+          <span class="mono">03 / AI, INTERACTION & RESEARCH</span>
+          <span class="project-status">
+            Lufthansa Technik · Master’s thesis
+          </span>
+        </div>
+        <div class="split-project">
+          <div class="project-copy">
+            <h3>
+              The right information.
+              <br />
+              At the right moment.
+            </h3>
+            <h4>AI-supported cabin safety learning</h4>
+            <p>
+              A real-time VR learning system combining speech recognition,
+              conversational tutoring, speech synthesis and visual cues. I built
+              task progression, evaluation and recovery, then studied how
+              progressively revealing a concept map changed the experience.
+            </p>
+            <a class="inline-link" href="/Tuncay_Unal_Resume.pdf">
+              Read the research summary in my CV{' '}
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <ConceptMap client:visible={{ rootMargin: '400px' }} />
+        </div>
+        <div class="research-results">
+          <div class="research-main">
+            <span class="result-value">
+              +19.38<span>pts</span>
+            </span>
+            <p>
+              Higher mean System Usability Scale score
+              <br />
+              with progressive disclosure versus full visibility
+            </p>
+          </div>
+          <div class="research-stat">
+            <strong>24</strong>
+            <span>study participants</span>
+          </div>
+          <div class="research-stat">
+            <strong>4,700+</strong>
+            <span>telemetry events</span>
+          </div>
+          <div class="research-stat">
+            <strong>9</strong>
+            <span>instructional sections</span>
+          </div>
+        </div>
+        <div class="project-colophon">
+          <p>Unity / C# / OpenAI integration / JSONL & CSV telemetry / HCI</p>
+          <p>Study result · 2 concept-map construction tasks</p>
+        </div>
+      </article>
+
+      <article class="project project-spatial" id="spatial">
+        <div class="project-top">
+          <span class="mono">04 / REAL-TIME 3D & WEBAR</span>
+          <span class="project-status">Fraunhofer CML</span>
+        </div>
+        <div class="split-project">
+          <SpatialLab />
+          <div class="project-copy">
+            <h3>
+              Software, beyond
+              <br />
+              the screen.
+            </h3>
+            <h4>Interactive systems for applied research</h4>
+            <p>
+              At Fraunhofer CML, I developed and optimised Unity/C# applications
+              for maritime and robotics R&D. My browser-based WebAR viewer
+              connects camera access, image tracking and interactive 3D
+              presentation.
+            </p>
+            <p>
+              Printed markers and business cards become anchors for a digital
+              model in the physical world.
+            </p>
+            <a
+              class="inline-link"
+              href="https://github.com/Tunc0x/web-ar-model-viewer"
+            >
+              Inspect the WebAR build <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+        <div class="project-colophon">
+          <p>Unity / C# / Image tracking / WebAR / Real-time 3D</p>
+          <p>The coordinate lab illustrates the spatial principle.</p>
+        </div>
+      </article>
+    </section>
+
+    <section
+      id="experience"
+      class="experience section-wrap"
+      aria-labelledby="experience-title"
+    >
+      <div class="section-heading">
+        <p class="eyebrow">
+          <span class="section-number">02</span> EXPERIENCE
+        </p>
+        <h2 id="experience-title">
+          Built in
+          <br />
+          <span class="muted-word">good company.</span>
+        </h2>
+      </div>
+      <div class="experience-list">
+        <article class="experience-row">
+          <div class="experience-date mono">JAN — AUG 2026</div>
+          <div>
+            <h3>Lufthansa Technik</h3>
+            <span class="experience-role">
+              Software Engineer, AI Training Systems
+            </span>
+            <span class="experience-kind">Master’s thesis · Hamburg</span>
+          </div>
+          <p>
+            Built and evaluated an AI-supported learning system for cabin
+            fire-and-smoke procedures. Connected conversational interaction,
+            concept-map tasks and detailed telemetry.
+          </p>
+          <a href="#learning" aria-label="Explore the Lufthansa Technik thesis">
+            ↗
+          </a>
+        </article>
+        <article class="experience-row">
+          <div class="experience-date mono">SEP — NOV 2025</div>
+          <div>
+            <h3>Lufthansa Technik</h3>
+            <span class="experience-role">Software Engineer Intern</span>
+            <span class="experience-kind">Hamburg</span>
+          </div>
+          <p>
+            Took internal VR training from proof of concept into deployment and
+            trainee use. Developed reusable VR Builder components, localised the
+            experience and supported headset testing.
+          </p>
+          <span class="row-index mono">02</span>
+        </article>
+        <article class="experience-row">
+          <div class="experience-date mono">NOV 2023 — FEB 2025</div>
+          <div>
+            <h3>Fraunhofer CML</h3>
+            <span class="experience-role">Software Engineer</span>
+            <span class="experience-kind">Hamburg</span>
+          </div>
+          <p>
+            Developed Unity/C# real-time applications for maritime and robotics
+            research, including a browser-based WebAR model viewer with image
+            tracking.
+          </p>
+          <a href="#spatial" aria-label="Explore Fraunhofer and WebAR work">
+            ↗
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section
+      id="about"
+      class="about section-wrap"
+      aria-labelledby="about-title"
+    >
+      <div class="about-intro">
+        <div>
+          <p class="eyebrow">
+            <span class="section-number">03</span> THE PERSON BEHIND THE CODE
+          </p>
+          <h2 id="about-title">
+            A systems mindset.
+            <br />
+            <span class="muted-word">A human perspective.</span>
+          </h2>
+        </div>
+        <div class="about-prose">
+          <p>
+            I’m Tuncay, a software engineer with a background in computer
+            science and human-computer interaction.
+          </p>
+          <p>
+            I’m interested in both sides of a system: how it holds together
+            underneath, and how it makes sense to the person using it. That’s
+            taken me from aviation training and maritime research to full-stack
+            applications and event-driven backends.
+          </p>
+          <a class="inline-link" href="/Tuncay_Unal_Resume.pdf" download>
+            Download my résumé <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+      <div class="capability-heading">
+        <h3>Tools follow the problem.</h3>
+        <span class="mono">CAPABILITIES / EVIDENCE</span>
+      </div>
+      <div class="capabilities">
+        {capabilities.map((c) => (
+          <a class="capability-row" href={c.href}>
+            <span class="mono">{c.n}</span>
+            <div>
+              <h4>{c.name}</h4>
+              <p>{c.detail}</p>
+            </div>
+            <p class="capability-skills">{c.skills}</p>
+            <span class="capability-project">
+              {c.project} <span aria-hidden="true">↗</span>
+            </span>
+          </a>
+        ))}
+      </div>
+      <div class="education">
+        <div>
+          <p class="eyebrow">EDUCATION</p>
+          <h3>
+            Foundations
+            <br />
+            for the work.
+          </h3>
+        </div>
+        <div class="education-degree">
+          <span class="mono">2023 — 2026</span>
+          <h4>MSc Computer Science</h4>
+          <p>University of Hamburg</p>
+        </div>
+        <div class="education-degree">
+          <span class="mono">2020 — 2023</span>
+          <h4>BSc Human-Computer Interaction</h4>
+          <p>University of Hamburg</p>
+        </div>
+      </div>
+      <div class="about-footer">
+        <span>German · Native</span>
+        <span>English · C2</span>
+        <span>Hamburg, Germany</span>
+      </div>
+    </section>
+
+    <section
+      id="contact"
+      class="contact section-wrap"
+      aria-labelledby="contact-title"
+    >
+      <div class="contact-top">
+        <p class="eyebrow">
+          <span class="section-number">04</span> WHAT’S NEXT?
+        </p>
+        <p>
+          Have a system to build
+          <br />
+          or a problem worth solving?
+        </p>
+      </div>
+      <a class="contact-title-link" href="mailto:tuncayunal@hotmail.de">
+        <h2 id="contact-title">
+          Let’s make
+          <br />
+          <span>it work.</span>
+        </h2>
+        <span class="contact-arrow" aria-hidden="true">
+          ↗
+        </span>
+      </a>
+      <div class="contact-bottom">
+        <a class="contact-email" href="mailto:tuncayunal@hotmail.de">
+          tuncayunal@hotmail.de
+        </a>
+        <div>
+          <a href={linkedin}>
+            LinkedIn <span aria-hidden="true">↗</span>
+          </a>
+          <a href="https://github.com/Tunc0x">
+            GitHub <span aria-hidden="true">↗</span>
+          </a>
+          <a href="/Tuncay_Unal_Resume.pdf">
+            Résumé <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+      <p class="work-note">
+        Open to software engineering opportunities · UK Skilled Worker
+        sponsorship required
+      </p>
+    </section>
+  </main>
+  <footer class="site-footer section-wrap">
+    <span>© {new Date().getUTCFullYear()} Tuncay Ünal</span>
+    <span>Built with care. And curiosity.</span>
+    <a href="#top">Back to top ↑</a>
+    <button id="motion-toggle" type="button" aria-pressed="false" hidden>
+      Pause motion
+    </button>
+  </footer>
+</Layout>

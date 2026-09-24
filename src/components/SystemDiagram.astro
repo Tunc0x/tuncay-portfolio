@@ -1,0 +1,98 @@
+<div
+  class="system-diagram"
+  aria-label="Software systems connect interface, services and data. A diagram of the three layers."
+>
+  <div class="diagram-corner top-left">FIG. 01 / A SYSTEM IN MOTION</div>
+  <svg viewBox="0 0 620 480" role="img" aria-labelledby="system-title">
+    <title id="system-title">Connected layers of a software system: interface, services, and data</title>
+    <defs>
+      <pattern
+        id="dots"
+        x="0"
+        y="0"
+        width="24"
+        height="24"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle cx="1" cy="1" r="1" fill="#454a3f" opacity=".55" />
+      </pattern>
+      <linearGradient id="surface" x1="0" x2="1" y1="0" y2="1">
+        <stop stop-color="#30372c" />
+        <stop offset="1" stop-color="#171b16" />
+      </linearGradient>
+    </defs>
+    <rect width="620" height="480" fill="url(#dots)" />
+    <g class="system-stack">
+      <path
+        d="M145 294L314 210L481 294L313 379Z"
+        fill="url(#surface)"
+        stroke="#59634f"
+      />
+      <path
+        d="M145 294v22l168 84 168-84v-22M313 379v21"
+        fill="none"
+        stroke="#3e4837"
+      />
+      <g stroke="#4b5940" fill="none">
+        <path d="M191 294l122 61 123-61-122-61Z" />
+        <path d="M230 294l83 41 83-41-82-42Z" />
+      </g>
+      <path
+        class="layer-middle"
+        d="M145 217L314 133L481 217L313 301Z"
+        fill="#22291f"
+        fill-opacity=".9"
+        stroke="#8b9e73"
+      />
+      <g class="layer-middle" fill="#bddd8d" stroke="#c5e8a1">
+        <path d="M270 214l44-22 44 22-44 22Z" />
+        <path d="M270 214v12l44 22 44-22v-12l-44 22Z" fill="#536444" />
+      </g>
+      <path
+        class="layer-top"
+        d="M145 140L314 56L481 140L313 224Z"
+        fill="#c1dba2"
+        fill-opacity=".09"
+        stroke="#bddd8d"
+      />
+      <g class="layer-top" stroke="#839872" fill="none">
+        <path d="M188 140l126-63 125 63-126 62Z" />
+        <path d="M216 140l98-49 98 49-99 49Z" />
+        <path d="M245 140l69-34 69 34-70 35Z" />
+      </g>
+      <g
+        class="system-connectors"
+        stroke="#bbdc94"
+        stroke-dasharray="3 6"
+        fill="none"
+      >
+        <path d="M145 140v154M481 140v154M313 224v155M314 56v77" />
+      </g>
+      <g fill="#d1eca8">
+        <circle class="signal s1" cx="145" cy="140" r="4" />
+        <circle class="signal s2" cx="481" cy="217" r="4" />
+        <circle class="signal s3" cx="313" cy="301" r="4" />
+      </g>
+    </g>
+    <g stroke="#5f6857" fill="none">
+      <path d="M431 115h51l18-17h54M444 235h42l17 17h51M432 340h57l17 17h48" />
+    </g>
+    <g class="svg-label" fill="#b8bfb0">
+      <text x="506" y="88">
+        INTERFACE
+      </text>
+      <text x="506" y="277">
+        SERVICES
+      </text>
+      <text x="506" y="381">
+        DATA
+      </text>
+    </g>
+  </svg>
+  <div class="diagram-foot">
+    <span>FROM INTERACTION TO INFRASTRUCTURE</span>
+    <span class="diagram-cross" aria-hidden="true">
+      +
+    </span>
+  </div>
+</div>
