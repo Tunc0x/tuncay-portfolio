@@ -1,0 +1,48 @@
+---
+interface Props {
+  image: { src: string; srcset: string; width: number; height: number };
+  alt: string;
+  caption: string;
+  label?: string;
+  sizes?: string;
+  class?: string;
+}
+const {
+  image,
+  alt,
+  caption,
+  label,
+  sizes = '(max-width: 600px) calc(100vw - 40px), (max-width: 1150px) calc(100vw - 72px), min(1440px, 100vw - 112px)',
+  class: className,
+} = Astro.props;
+---
+
+<figure class:list={['project-media', className]}>
+  <div class="media-frame">
+    <img
+      src={image.src}
+      srcset={image.srcset}
+      sizes={sizes}
+      width={image.width}
+      height={image.height}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  <figcaption>
+    <div>
+      {label && <span class="media-label mono">{label}</span>}
+      <span>{caption}</span>
+    </div>
+    <a
+      class="media-enlarge"
+      href={image.src}
+      target="_blank"
+      rel="noopener"
+      aria-label={`View full-size image: ${alt} (opens in a new tab)`}
+    >
+      Full size <span aria-hidden="true">↗</span>
+    </a>
+  </figcaption>
+</figure>

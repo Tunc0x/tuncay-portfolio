@@ -21,7 +21,7 @@ npm ci
 npm run dev
 ```
 
-Open the local address printed by Astro. The development server uses port 4173.
+Open the local address printed by Astro. The development server uses port 4173 and explicitly selects development mode so React islands also work in environments that otherwise inherit `NODE_ENV=production`.
 
 ```sh
 npm run check
@@ -33,7 +33,7 @@ The production build runs Astro/TypeScript checks and generates static files in 
 
 ## Deployment: GitHub → Cloudflare Pages
 
-Connect this repository to **Cloudflare Pages** with these settings:
+This repository, `Tunc0x/tuncay-portfolio`, is connected to the existing **Cloudflare Pages** project at <https://tuncay-portfolio.pages.dev>. Its build settings are:
 
 | Setting                | Value               |
 | ---------------------- | ------------------- |
@@ -44,7 +44,7 @@ Connect this repository to **Cloudflare Pages** with these settings:
 | Build output directory | `dist`              |
 | Node version           | `22` (via `.nvmrc`) |
 
-Use the Pages free plan and the project's assigned `*.pages.dev` address. Pushes to `main` trigger production builds once Git integration is connected. No Worker, SSR adapter, function, database or secret is required.
+Pushes to `main` trigger production builds through the existing Git integration. No Worker, SSR adapter, function, database or secret is required.
 
 Astro uses `SITE_URL` when supplied, otherwise Cloudflare's build-time `CF_PAGES_URL`, for canonical and Open Graph URLs. After the project receives its stable production domain, set `SITE_URL` to that full HTTPS address in Pages' build environment. For a custom domain later, attach it in Pages and update `SITE_URL`; the application architecture stays the same.
 
@@ -59,11 +59,18 @@ src/pages/index.astro             Portfolio content and sections
 src/components/SystemDiagram.astro   Lightweight SVG hero
 src/components/ProjectLab.tsx     React project demonstrations
 src/components/SpatialLab.astro   Accessible 3D fallback and controls
+src/components/FurtherWork.astro DIOR IT, exergame and bachelor research
+src/components/ProjectImage.astro Responsive project images and captions
+src/components/ProjectVideo.astro Native, user-initiated demo videos
+src/data/project-media.json      Image dimensions and responsive variants
 src/scripts/spatial.ts           Optional Three.js scene
 src/scripts/site.ts              Motion and lazy loading
 src/styles/global.css           Visual system and responsive layouts
+src/styles/media.css            Project evidence layouts and disclosures
+public/media/                   Optimized WebP images and MP4 excerpts
 public/Tuncay_Unal_Resume.pdf    Supplied résumé
 docs/content-sources.md          Factual sources and scope boundaries
+docs/media.md                    Media selection and encoding notes
 ```
 
 The résumé remains the source of truth for dates and quantified accomplishments. Do not present the product roadmap as shipped functionality. Keep all scheduler preview data fictional and explicitly labelled.
@@ -72,7 +79,7 @@ The résumé remains the source of truth for dates and quantified accomplishment
 
 Semantic navigation and headings, a skip link, visible keyboard focus and direct contact links are available in the static HTML. Important content does not depend on WebGL or scrolling animations. Motion follows `prefers-reduced-motion`; an additional pause control is available to visitors who allow motion. Three.js is split from the initial page and uses a capped pixel ratio. Its animation pauses offscreen or in a background tab. An SVG renderer keeps the same scene interactive without WebGL, and a static coordinate diagram remains if the 3D module cannot load.
 
-Fonts are served locally. No third-party font requests, tracking scripts, embedded videos or camera permissions are used.
+Fonts and project media are served locally. No third-party font requests, tracking scripts, external video embeds or camera permissions are used. Images have explicit dimensions, responsive variants and lazy loading. Native videos use `preload="none"`, never autoplay, and pause when their disclosure closes, another video starts, the document becomes hidden, or the motion pause control is activated. Silent excerpts have descriptive text alternatives beside the controls.
 
 ## Attribution
 

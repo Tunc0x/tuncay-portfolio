@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import SystemDiagram from '../components/SystemDiagram.astro';
 import { Pipeline, Scheduler, ConceptMap } from '../components/ProjectLab';
 import SpatialLab from '../components/SpatialLab.astro';
+import ProjectImage from '../components/ProjectImage.astro';
+import ProjectVideo from '../components/ProjectVideo.astro';
+import FurtherWork from '../components/FurtherWork.astro';
+import media from '../data/project-media.json';
 const linkedin = 'https://www.linkedin.com/in/tuncay-%C3%BCnal-4562b6182/';
 const capabilities = [
   {
@@ -126,6 +130,16 @@ const capabilities = [
         </span>
       </div>
 
+      <nav class="work-index" aria-label="Project index">
+        <a href="#opsreplay">OpsReplay</a>
+        <a href="#scheduler">Scheduler</a>
+        <a href="#learning">AI learning</a>
+        <a href="#spatial">WebAR</a>
+        <a href="#dior">DIOR IT</a>
+        <a href="#bend">Exergame</a>
+        <a href="#street-trees">Street trees</a>
+      </nav>
+
       <article class="project project-ops" id="opsreplay">
         <div class="project-top">
           <span class="mono">01 / BACKEND & DISTRIBUTED SYSTEMS</span>
@@ -248,6 +262,45 @@ const capabilities = [
           </div>
           <ConceptMap client:visible={{ rootMargin: '400px' }} />
         </div>
+        <div class="learning-capture">
+          <ProjectImage
+            image={media.learning}
+            alt="The Lufthansa Technik VR learning environment, with a conversational robot agent beside a three-dimensional concept map of cabin fire and smoke topics."
+            label="INSIDE THE IMPLEMENTED APPLICATION"
+            caption="The conversational agent and spatial concept map share the learner’s environment. Actual project capture; the interactive diagram above explains the disclosure principle."
+          />
+          <details class="media-disclosure">
+            <summary>
+              <span>Watch the learning interaction</span>
+              <span class="mono">
+                0:21 <span aria-hidden="true">+</span>
+              </span>
+            </summary>
+            <div class="disclosure-content">
+              <ProjectVideo
+                id="learning-demo"
+                title="AI-supported VR learning interaction"
+                duration="0:21"
+                description="A microphone panel appears beside the agent. The learner then points at the concept map and connects spatial nodes with a controller ray. An excerpt of the implemented interaction, with audio removed."
+              />
+              <div class="dossier-copy">
+                <h5>Voice, then structure.</h5>
+                <p>
+                  The agent supports conversation; the map gives that
+                  conversation a spatial structure. Learners work with nodes and
+                  connections, while task progression, evaluation and telemetry
+                  record the interaction.
+                </p>
+                <p class="dossier-note">
+                  The study compared progressive disclosure with full map
+                  visibility. The supplied research video reports no significant
+                  condition effect on post-test knowledge after accounting for
+                  pre-test scores.
+                </p>
+              </div>
+            </div>
+          </details>
+        </div>
         <div class="research-results">
           <div class="research-main">
             <span class="result-value">
@@ -284,14 +337,34 @@ const capabilities = [
           <span class="project-status">Fraunhofer CML</span>
         </div>
         <div class="split-project">
-          <SpatialLab />
+          <div
+            class="webar-captures"
+            role="region"
+            aria-label="AR viewer image sequence"
+            tabindex="0"
+          >
+            <ProjectImage
+              image={media['webar-scan']}
+              alt="The mobile WebAR viewer prompts the user to point the camera at an image marker."
+              label="01 / FIND THE IMAGE"
+              caption="Camera input searches for the marker."
+              sizes="(max-width: 600px) 40vw, 24vw"
+            />
+            <ProjectImage
+              image={media['webar-model']}
+              alt="A tracked 3D building model with information hotspots appears over an image in the mobile WebAR viewer."
+              label="02 / REVEAL THE MODEL"
+              caption="The recognised image anchors an interactive 3D model."
+              sizes="(max-width: 600px) 40vw, 24vw"
+            />
+          </div>
           <div class="project-copy">
             <h3>
               Software, beyond
               <br />
               the screen.
             </h3>
-            <h4>Interactive systems for applied research</h4>
+            <h4>AR Model Viewer · Fraunhofer CML</h4>
             <p>
               At Fraunhofer CML, I developed and optimised Unity/C# applications
               for maritime and robotics R&D. My browser-based WebAR viewer
@@ -310,11 +383,35 @@ const capabilities = [
             </a>
           </div>
         </div>
+        <details class="media-disclosure spatial-disclosure">
+          <summary>
+            <span>Explore the spatial principle & demo</span>
+            <span aria-hidden="true">+</span>
+          </summary>
+          <div class="disclosure-content spatial-evidence">
+            <div>
+              <SpatialLab />
+              <p class="dossier-note">
+                The coordinate lab is an illustrative model. The adjacent
+                recording shows the actual mobile application.
+              </p>
+            </div>
+            <ProjectVideo
+              id="webar-demo"
+              title="AR Model Viewer image tracking demonstration"
+              duration="0:25"
+              width={592}
+              height={1280}
+              description="A phone camera recognises the image on a laptop screen. A 3D building model appears over it and stays aligned as the viewing angle changes. Silent excerpt of the supplied showcase."
+            />
+          </div>
+        </details>
         <div class="project-colophon">
           <p>Unity / C# / Image tracking / WebAR / Real-time 3D</p>
           <p>The coordinate lab illustrates the spatial principle.</p>
         </div>
       </article>
+      <FurtherWork />
     </section>
 
     <section
@@ -358,11 +455,28 @@ const capabilities = [
             <span class="experience-role">Software Engineer Intern</span>
             <span class="experience-kind">Hamburg</span>
           </div>
-          <p>
-            Took internal VR training from proof of concept into deployment and
-            trainee use. Developed reusable VR Builder components, localised the
-            experience and supported headset testing.
-          </p>
+          <div class="experience-description" id="shop-floor">
+            <p>
+              <strong>VR Shop-Floor / Usual Suspects Training.</strong> Took
+              internal VR training from proof of concept into deployment and
+              trainee use.
+            </p>
+            <details class="experience-detail">
+              <summary>
+                Engineering contribution <span aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Built reusable VR Builder behaviours and conditions. Localised
+                subtitles and audio into English, deployed the English build for
+                headset testing, and demonstrated XR applications at trainee and
+                newcomer events.
+              </p>
+              <p class="dossier-note">
+                Internship work, separate from the later AI-supported master’s
+                thesis.
+              </p>
+            </details>
+          </div>
           <span class="row-index mono">02</span>
         </article>
         <article class="experience-row">

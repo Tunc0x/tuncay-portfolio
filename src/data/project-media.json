@@ -1,0 +1,62 @@
+{
+  "learning": {
+    "src": "/media/learning-1600.webp",
+    "srcset": "/media/learning-640.webp 640w, /media/learning-1000.webp 1000w, /media/learning-1600.webp 1600w",
+    "width": 1918,
+    "height": 1079
+  },
+  "webar-scan": {
+    "src": "/media/webar-scan-707.webp",
+    "srcset": "/media/webar-scan-360.webp 360w, /media/webar-scan-707.webp 707w",
+    "width": 707,
+    "height": 1306
+  },
+  "webar-model": {
+    "src": "/media/webar-model-707.webp",
+    "srcset": "/media/webar-model-360.webp 360w, /media/webar-model-707.webp 707w",
+    "width": 707,
+    "height": 1288
+  },
+  "spot": {
+    "src": "/media/spot-1000.webp",
+    "srcset": "/media/spot-480.webp 480w, /media/spot-1000.webp 1000w",
+    "width": 1178,
+    "height": 1020
+  },
+  "bend-arena": {
+    "src": "/media/bend-arena-1174.webp",
+    "srcset": "/media/bend-arena-640.webp 640w, /media/bend-arena-1174.webp 1174w",
+    "width": 1174,
+    "height": 637
+  },
+  "bend-impact": {
+    "src": "/media/bend-impact-877.webp",
+    "srcset": "/media/bend-impact-480.webp 480w, /media/bend-impact-877.webp 877w",
+    "width": 877,
+    "height": 918
+  },
+  "street": {
+    "src": "/media/street-1085.webp",
+    "srcset": "/media/street-640.webp 640w, /media/street-1085.webp 1085w",
+    "width": 1085,
+    "height": 587
+  },
+  "street-covered": {
+    "src": "/media/street-covered-1117.webp",
+    "srcset": "/media/street-covered-640.webp 640w, /media/street-covered-1117.webp 1117w",
+    "width": 1117,
+    "height": 595
+  },
+  "street-green": {
+    "src": "/media/street-green-1120.webp",
+    "srcset": "/media/street-green-640.webp 640w, /media/street-green-1120.webp 1120w",
+    "width": 1120,
+    "height": 593
+  },
+  "street-trees": {
+    "src": "/media/street-trees-1120.webp",
+    "srcset": "/media/street-trees-640.webp 640w, /media/street-trees-1120.webp 1120w",
+    "width": 1120,
+    "height": 595
+  }
+}

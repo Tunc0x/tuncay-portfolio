@@ -1,0 +1,335 @@
+---
+import ProjectImage from './ProjectImage.astro';
+import ProjectVideo from './ProjectVideo.astro';
+import media from '../data/project-media.json';
+const conditions = [
+  {
+    key: 'street',
+    label: '01 / Street',
+    caption: 'The reference scene. Buildings remain visible.',
+    alt: 'A virtual urban street with buildings on both sides and no trees or coverings.',
+    mean: '5.37',
+    sd: '0.96',
+  },
+  {
+    key: 'street-covered',
+    label: '02 / Neutral covering',
+    caption: 'Grey scaffolding covers the building façades.',
+    alt: 'The same virtual street with grey scaffolding covering the buildings.',
+    mean: '5.55',
+    sd: '0.95',
+  },
+  {
+    key: 'street-green',
+    label: '03 / Green covering',
+    caption: 'The covering stays; its colour changes to green.',
+    alt: 'The same virtual street with green scaffolding covering the buildings.',
+    mean: '5.37',
+    sd: '0.96',
+  },
+  {
+    key: 'street-trees',
+    label: '04 / Street trees',
+    caption: 'Rows of trees line the same street.',
+    alt: 'The same virtual street with leafy trees along both pavements.',
+    mean: '6.11',
+    sd: '1.05',
+  },
+] as const;
+---
+
+<div class="further-work" aria-labelledby="further-title">
+  <div class="further-heading">
+    <div>
+      <p class="eyebrow">FURTHER EXPLORATIONS</p>
+      <h3 id="further-title">A wider field of view.</h3>
+    </div>
+    <p>
+      Robotics, physical interaction and controlled experiments.
+      <br />
+      Three more ways of making software meet the world.
+    </p>
+  </div>
+
+  <details class="project-dossier" id="dior" data-project-details>
+    <summary>
+      <span class="dossier-number mono">05</span>
+      <div class="dossier-title">
+        <span class="mono">FRAUNHOFER CML · ROBOTICS & VR</span>
+        <h4>DIOR IT</h4>
+        <p>Bringing a robot’s view into the headset.</p>
+      </div>
+      <img
+        class="dossier-preview"
+        src={media.spot.src}
+        width="1178"
+        height="1020"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+      <span class="dossier-toggle">
+        <span class="dossier-closed">Explore project</span>
+        <span class="dossier-open">Close project</span>
+        <span class="dossier-sign" aria-hidden="true">
+          +
+        </span>
+      </span>
+    </summary>
+    <div class="dossier-body dior-layout">
+      <ProjectImage
+        image={media.spot}
+        alt="Boston Dynamics Spot with its mounted equipment at Fraunhofer CML."
+        caption="Boston Dynamics Spot at Fraunhofer CML. Project photograph supplied by Tuncay Ünal."
+        label="THE PHYSICAL SYSTEM"
+        sizes="(max-width: 750px) calc(100vw - 40px), 40vw"
+      />
+      <div class="dossier-copy">
+        <p class="eyebrow">PROJECT CONTEXT</p>
+        <p>
+          DIOR IT explores robotics and immersive interfaces for inspection and
+          maintenance. The wider Fraunhofer project combines remote operation of
+          Boston Dynamics Spot, live 360° video and VR/AR tools.
+        </p>
+        <h5>My contribution</h5>
+        <p>
+          I worked on the Unity side of the viewing and interaction experience:
+          receiving and processing Spot’s video data, streaming it to a VR
+          headset, and making the imagery usable for interaction.
+        </p>
+        <dl class="contribution-list">
+          <div>
+            <dt>360° interaction</dt>
+            <dd>A laser marker projected onto a video sphere.</dd>
+          </div>
+          <div>
+            <dt>Projection correction</dt>
+            <dd>
+              A shader to reverse the Panini projection, plus analysis and
+              correction of marker displacement caused by projection offsets.
+            </dd>
+          </div>
+          <div>
+            <dt>In-headset controls</dt>
+            <dd>Interactive panels that could be scaled, zoomed and moved.</dd>
+          </div>
+        </dl>
+        <a
+          class="inline-link"
+          href="https://www.cml.fraunhofer.de/de/forschungsprojekte1/DIOR.html"
+        >
+          Explore the Fraunhofer project <span aria-hidden="true">↗</span>
+        </a>
+        <p class="dossier-note">
+          Team project · Unity / C# / Video streaming / Shaders
+        </p>
+      </div>
+    </div>
+  </details>
+
+  <details class="project-dossier" id="bend" data-project-details>
+    <summary>
+      <span class="dossier-number mono">06</span>
+      <div class="dossier-title">
+        <span class="mono">UNIVERSITY TEAM PROJECT · 2024</span>
+        <h4>Bend for Your Life</h4>
+        <p>Physical gestures become elemental attacks.</p>
+      </div>
+      <img
+        class="dossier-preview"
+        src={media['bend-arena'].src}
+        width="1174"
+        height="637"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+      <span class="dossier-toggle">
+        <span class="dossier-closed">Explore project</span>
+        <span class="dossier-open">Close project</span>
+        <span class="dossier-sign" aria-hidden="true">
+          +
+        </span>
+      </span>
+    </summary>
+    <div class="dossier-body">
+      <div class="dossier-intro">
+        <div>
+          <p class="eyebrow">GESTURE → RECOGNITION → RESPONSE</p>
+          <h5>A little more movement.</h5>
+        </div>
+        <div>
+          <p>
+            A collaborative VR exergame inspired by{' '}
+            <em>Avatar: The Last Airbender</em>. Our five-person team built a
+            Unity game for Meta Quest in which controller gestures trigger seven
+            attacks across four elements.
+          </p>
+          <p>
+            My focus was gesture recognition, enemy behaviour and destruction
+            physics. The game matches recorded movements with MiVRy, introduces
+            attacks progressively, and increases the opponent’s blocking and
+            dodging capabilities across three rounds.
+          </p>
+        </div>
+      </div>
+      <ProjectImage
+        image={media['bend-arena']}
+        alt="An earth projectile travels towards the opponent in the game's courtyard arena."
+        label="IN-GAME CAPTURE"
+        caption="The arena connects physical input to projectiles, enemy reactions and immediate visual feedback."
+      />
+      <div class="bend-media">
+        <ProjectVideo
+          id="bend-demo"
+          title="Bend for Your Life gesture and combat demonstration"
+          duration="0:30"
+          description="The player follows a two-handed gesture tutorial, then uses physical movements in combat. The split-screen recording connects the controller motion with its in-game result. Two excerpts from the team demo; audio removed."
+        />
+        <ProjectImage
+          image={media['bend-impact']}
+          alt="A rock breaks into fragments in front of the exergame opponent."
+          label="ON IMPACT"
+          caption="Rock destruction using the OpenFracture Unity package."
+          sizes="(max-width: 750px) calc(100vw - 40px), 30vw"
+        />
+      </div>
+      <div class="dossier-endnote">
+        <p>
+          Built with Nazife Ertugrul, Tom Sanitz, Lara Flaig and Hauke Bünning.
+          Visuals and mechanics shown are the team’s work, using a mix of custom
+          and third-party assets.
+        </p>
+        <p>
+          University prototype · No formal user study or measured health benefit
+          is claimed. Gesture recognition was trained by one team member,
+          limiting its reliability across different body proportions.
+        </p>
+      </div>
+    </div>
+  </details>
+
+  <details class="project-dossier" id="street-trees" data-project-details>
+    <summary>
+      <span class="dossier-number mono">07</span>
+      <div class="dossier-title">
+        <span class="mono">BACHELOR’S THESIS · 2023</span>
+        <h4>Street trees, mood & cognition</h4>
+        <p>Four virtual streets. One controlled question.</p>
+      </div>
+      <img
+        class="dossier-preview"
+        src={media['street-trees'].src}
+        width="1120"
+        height="595"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+      <span class="dossier-toggle">
+        <span class="dossier-closed">Explore study</span>
+        <span class="dossier-open">Close study</span>
+        <span class="dossier-sign" aria-hidden="true">
+          +
+        </span>
+      </span>
+    </summary>
+    <div class="dossier-body">
+      <div class="dossier-intro">
+        <div>
+          <p class="eyebrow">30 PARTICIPANTS / WITHIN-SUBJECTS DESIGN</p>
+          <h5>
+            The Influence of Street Trees
+            <br />
+            on Mood and Cognition
+          </h5>
+        </div>
+        <div>
+          <p>
+            Do the effects of street trees extend beyond hiding buildings or
+            simply adding green? I built four urban environments in Unity,
+            keeping the street layout and background audio consistent while
+            varying trees and façade coverings.
+          </p>
+          <p>
+            Each participant experienced all four scenes on an HTC Vive Pro.
+            Passive navigation kept the route consistent; a balanced Latin
+            square varied the presentation order. A C# digit-span task adapted
+            from Woods et al. used researcher-scored responses.
+          </p>
+        </div>
+      </div>
+      <div class="condition-grid">
+        {conditions.map((c) => (
+          <ProjectImage
+            image={media[c.key]}
+            alt={c.alt}
+            label={c.label}
+            caption={c.caption}
+            sizes="(max-width: 600px) calc(100vw - 40px), 46vw"
+          />
+        ))}
+      </div>
+      <div class="study-findings">
+        <div class="study-chart">
+          <h5>Working-memory performance</h5>
+          <p class="chart-subtitle">
+            Digit Span Backwards · mean span in digits
+          </p>
+          <dl class="result-comparison">
+            {conditions.map((c) => (
+              <div
+                class:list={[
+                  'comparison-row',
+                  { 'comparison-highlight': c.key === 'street-trees' },
+                ]}
+              >
+                <dt>{c.label.split(' / ')[1]}</dt>
+                <dd>
+                  <span
+                    class="comparison-bar"
+                    style={`--value: ${(Number(c.mean) / 7) * 100}%`}
+                    aria-hidden="true"
+                  ></span>
+                  <strong>{c.mean}</strong>
+                  <span class="comparison-sd">SD {c.sd}</span>
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <p class="chart-scale mono">BAR SCALE: 0–7 DIGITS · N = 30</p>
+          <p class="dossier-note">
+            Thesis Table 4.1. Trees scored higher than each other condition in
+            Bonferroni-adjusted paired comparisons (p ≤ .0222). Means are
+            descriptive; the bars do not show uncertainty.
+          </p>
+        </div>
+        <div class="dossier-copy">
+          <h5>What the study found</h5>
+          <p>
+            The tree scene had higher digit-span performance and perceived
+            restorativeness than all three alternatives. Positive affect after
+            exposure was higher than in the plain street and green-covering
+            scenes.
+          </p>
+          <p>
+            Mood change scores did <strong>not</strong> differ significantly
+            between conditions. Neither did post-exposure negative affect. The
+            findings therefore support a narrower conclusion than “trees
+            improved mood.”
+          </p>
+          <p class="dossier-note">
+            Measures: Digit Span Backwards, PANAS and Perceived Restorativeness
+            Scale. Different perceived realism and coverage, a predominantly
+            young sample, and the VR setting limit how far the results
+            generalise.
+          </p>
+        </div>
+      </div>
+      <p class="dossier-note thesis-title" lang="de">
+        Original title: Der Einfluss von Straßenbäumen auf die Stimmung und die
+        Kognition: Eine Untersuchung in Virtual Reality.
+      </p>
+    </div>
+  </details>
+</div>

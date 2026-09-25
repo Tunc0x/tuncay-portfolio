@@ -23,6 +23,37 @@ motionQuery.addEventListener('change', () => {
 });
 updateMotion();
 
+// Native disclosures work without JavaScript; deep links open the requested case study.
+function revealLinkedProject() {
+  const id = window.location.hash.slice(1);
+  const target = document.getElementById(id);
+  if (
+    target instanceof HTMLDetailsElement &&
+    target.hasAttribute('data-project-details')
+  )
+    target.open = true;
+}
+revealLinkedProject();
+window.addEventListener('hashchange', revealLinkedProject);
+
+// A hidden or background video never keeps playing. Playback remains user initiated.
+document.querySelectorAll<HTMLVideoElement>('video').forEach((video) => {
+  video.addEventListener('play', () => {
+    document.querySelectorAll<HTMLVideoElement>('video').forEach((other) => {
+      if (other !== video) other.pause();
+    });
+  });
+  video.closest('details')?.addEventListener('toggle', (event) => {
+    if (!(event.currentTarget as HTMLDetailsElement).open) video.pause();
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) video.pause();
+  });
+  document.addEventListener('portfolio:motion', () => {
+    if (paused) video.pause();
+  });
+});
+
 // Content is visible in the HTML, including when scripting or animation is unavailable.
 const reveal = new IntersectionObserver(
   (entries) => {

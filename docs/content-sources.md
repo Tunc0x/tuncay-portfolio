@@ -2,6 +2,20 @@
 
 Reviewed 24 September 2026.
 
+Expansion reviewed 25 September 2026. Existing project and career facts were preserved; the following supplied evidence supports the additional material.
+
+## Expansion evidence
+
+- Lufthansa Technik reference letter: VR Shop-Floor / Usual Suspects training, reusable VR Builder behaviours and conditions, English subtitles/audio, headset deployment, trainee use and testing. This internship work is kept separate from the later master's thesis. No dedicated authentic internship screenshot was supplied.
+- Supplied master's thesis application screenshot and demonstration: original interface, conversational agent and spatial concept map. The excerpt illustrates interaction, not a usability or learning outcome by itself. The research slides report no significant condition effect on post-test knowledge after accounting for prior knowledge; the portfolio does not claim a learning-performance improvement.
+- Fraunhofer CML reference letter: Unity video reception/processing and headset streaming, laser-marker placement on a 360-degree sphere, reverse Panini projection shader, marker-offset correction, and adjustable panels. These describe Tuncay's DIOR IT contribution, not ownership of the entire robot system. The supplied Spot photograph shows the physical system.
+- Official DIOR project context: <https://www.cml.fraunhofer.de/de/forschungsprojekte1/DIOR.html>. Organization-level research scope is distinguished from individual implementation.
+- Supplied AR Model Viewer captures and showcase recording: marker search, tracking and anchored model. The existing coordinate lab is still explicitly labelled as an illustration, alongside the real application evidence.
+- Supplied _Bend for Your Life_ team documentation, screenshots and demo: Unity / Meta Quest, MiVRy gesture recognition, seven attacks across four elements, three increasingly capable opponent rounds, and OpenFracture destruction. The team is credited. Tuncay's focus on gesture recognition, enemy behaviour and destruction is also supported by his existing Carrd narrative; the collective paper does not allocate individual authorship. No formal user evaluation or health benefit is claimed. Single-person gesture training limits generalization across body proportions.
+- Supplied bachelor thesis, _Der Einfluss von Straßenbäumen auf Stimmung und Kognition_, and four matching scene captures: 30 participants, within-subjects Unity/HTC Vive Pro study, balanced Latin-square order, researcher-scored backward digit span adapted from Woods et al., PANAS and PRS measures. Chapter 4 takes precedence over broad wording in the abstract. Table 4.1 / printed page 26 provides the plotted digit-span means and SDs. The tree condition exceeds each comparator in Bonferroni-adjusted paired comparisons (p ≤ .0222). PANAS results on pages 28–29 distinguish post-exposure affect from change scores; change scores did not differ significantly. PRS results are on pages 31–33. Limitations on pages 43–45 include VR realism, sample composition and occlusion/generalization.
+
+Reference letters, full thesis PDFs, administrative pages, participant-level appendices, signatures and student identifiers are not published. See `media.md` for the curated media and exclusions. The existing approved public résumé remains available.
+
 ## Primary factual source
 
 The supplied `Tuncay_Uenal_Resume (1).pdf`, included as `public/Tuncay_Unal_Resume.pdf`, supplies education, work dates, role titles, skills, contact details and quantitative results.

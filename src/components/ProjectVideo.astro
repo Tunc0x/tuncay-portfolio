@@ -1,0 +1,52 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  duration: string;
+  description: string;
+  width?: number;
+  height?: number;
+}
+const {
+  id,
+  title,
+  duration,
+  description,
+  width = 1280,
+  height = 720,
+} = Astro.props;
+---
+
+<figure class="project-media project-video">
+  <div class="media-frame">
+    <video
+      controls
+      playsinline
+      preload="none"
+      muted
+      width={width}
+      height={height}
+      poster={`/media/${id}-poster.webp`}
+      aria-label={title}
+      aria-describedby={`${id}-description`}
+    >
+      <source src={`/media/${id}.mp4`} type="video/mp4" />
+      <a href={`/media/${id}.mp4`}>Watch {title}</a>
+    </video>
+  </div>
+  <figcaption id={`${id}-description`}>
+    <div>
+      <span class="media-label mono">{duration} · SILENT DEMO EXCERPT</span>
+      <span>{description}</span>
+    </div>
+    <a
+      class="media-enlarge"
+      href={`/media/${id}.mp4`}
+      target="_blank"
+      rel="noopener"
+      aria-label={`Open ${title} video in a new tab`}
+    >
+      Open video <span aria-hidden="true">↗</span>
+    </a>
+  </figcaption>
+</figure>
