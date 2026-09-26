@@ -80,7 +80,7 @@ const conditions = [
       <ProjectImage
         image={media.spot}
         alt="Boston Dynamics Spot with its mounted equipment at Fraunhofer CML."
-        caption="Boston Dynamics Spot at Fraunhofer CML. Project photograph supplied by Tuncay Ünal."
+        caption="Boston Dynamics Spot at Fraunhofer CML."
         label="THE PHYSICAL SYSTEM"
         sizes="(max-width: 750px) calc(100vw - 40px), 40vw"
       />
@@ -93,25 +93,21 @@ const conditions = [
         </p>
         <h5>My contribution</h5>
         <p>
-          I worked on the Unity side of the viewing and interaction experience:
-          receiving and processing Spot’s video data, streaming it to a VR
-          headset, and making the imagery usable for interaction.
+          My work on DIOR IT included using the Unity WebRTC package to get the
+          video stream working in the VR application and adding a laser marker
+          projected onto the 360° video sphere.
         </p>
         <dl class="contribution-list">
           <div>
-            <dt>360° interaction</dt>
-            <dd>A laser marker projected onto a video sphere.</dd>
-          </div>
-          <div>
-            <dt>Projection correction</dt>
+            <dt>WebRTC in Unity</dt>
             <dd>
-              A shader to reverse the Panini projection, plus analysis and
-              correction of marker displacement caused by projection offsets.
+              Worked with the Unity WebRTC package to get the video stream
+              working in the VR application.
             </dd>
           </div>
           <div>
-            <dt>In-headset controls</dt>
-            <dd>Interactive panels that could be scaled, zoomed and moved.</dd>
+            <dt>360° interaction</dt>
+            <dd>Added a laser marker that projected onto the video sphere.</dd>
           </div>
         </dl>
         <a
@@ -121,7 +117,7 @@ const conditions = [
           Explore the Fraunhofer project <span aria-hidden="true">↗</span>
         </a>
         <p class="dossier-note">
-          Team project · Unity / C# / Video streaming / Shaders
+          Team project · Unity / C# / Unity WebRTC / 360° interaction
         </p>
       </div>
     </div>
@@ -184,7 +180,7 @@ const conditions = [
           id="bend-demo"
           title="Bend for Your Life gesture and combat demonstration"
           duration="0:30"
-          description="The player follows a two-handed gesture tutorial, then uses physical movements in combat. The split-screen recording connects the controller motion with its in-game result. Two excerpts from the team demo; audio removed."
+          description="The player follows a two-handed gesture tutorial, then uses physical movements in combat. The split-screen recording connects the controller motion with its in-game result."
         />
         <ProjectImage
           image={media['bend-impact']}

@@ -79,7 +79,7 @@ The résumé remains the source of truth for dates and quantified accomplishment
 
 Semantic navigation and headings, a skip link, visible keyboard focus and direct contact links are available in the static HTML. Important content does not depend on WebGL or scrolling animations. Motion follows `prefers-reduced-motion`; an additional pause control is available to visitors who allow motion. Three.js is split from the initial page and uses a capped pixel ratio. Its animation pauses offscreen or in a background tab. An SVG renderer keeps the same scene interactive without WebGL, and a static coordinate diagram remains if the 3D module cannot load.
 
-Fonts and project media are served locally. No third-party font requests, tracking scripts, external video embeds or camera permissions are used. Images have explicit dimensions, responsive variants and lazy loading. Native videos use `preload="none"`, never autoplay, and pause when their disclosure closes, another video starts, the document becomes hidden, or the motion pause control is activated. Silent excerpts have descriptive text alternatives beside the controls.
+Fonts and project media are served locally. No third-party font requests, tracking scripts, external video embeds or camera permissions are used. Images have explicit dimensions, responsive variants and lazy loading. Native videos use `preload="none"`, never autoplay, and pause when their disclosure closes, another video starts, the document becomes hidden, or the motion pause control is activated. Demo excerpts have descriptive text alternatives beside the controls.
 
 ## Attribution
 
