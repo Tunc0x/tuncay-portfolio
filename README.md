@@ -71,15 +71,7 @@ Project videos are user-initiated rather than autoplayed, and important content 
 
 The portfolio is statically built with Astro and automatically deployed to Cloudflare Pages from the `main` branch.
 
-GitHub Pages independently builds and deploys the same branch through `.github/workflows/pages.yml` at https://tunc0x.github.io/tuncay-portfolio/. In the repository's Pages settings, the publishing source must be **GitHub Actions**.
-
-The GitHub Pages workflow sets `GITHUB_PAGES=true`, selecting `https://tunc0x.github.io` and the `/tuncay-portfolio` base path. Cloudflare keeps its existing build command, root base path and `SITE_URL` / `CF_PAGES_URL` settings. Canonical URLs, social-preview URLs and public asset paths follow the selected deployment.
-
-To build the GitHub Pages version locally:
-
-```bash
-GITHUB_PAGES=true npm run build
-```
+GitHub Pages independently builds and deploys the same branch through `.github/workflows/pages.yml` at https://tunc0x.github.io/tuncay-portfolio/.
 
 ## Attribution
 
