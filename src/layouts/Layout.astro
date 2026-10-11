@@ -3,6 +3,7 @@ import '@fontsource-variable/manrope';
 import '@fontsource/ibm-plex-mono/400.css';
 import '../styles/global.css';
 import '../styles/media.css';
+import { withBase } from '../utils/paths';
 interface Props {
   title?: string;
   description?: string;
@@ -13,6 +14,9 @@ const {
 } = Astro.props;
 const canonical = Astro.site
   ? new URL(Astro.url.pathname, Astro.site)
+  : undefined;
+const socialImage = Astro.site
+  ? new URL(withBase('/og-image.png'), Astro.site)
   : undefined;
 ---
 
@@ -26,10 +30,7 @@ const canonical = Astro.site
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://tuncay-portfolio.pages.dev/og-image.png"
-    />
+    <meta property="og:image" content={socialImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="627" />
     <meta property="og:image:alt" content="Tuncay Ünal — Software Engineer" />
@@ -39,7 +40,7 @@ const canonical = Astro.site
         <meta property="og:url" content={canonical} />
       </>
     )}
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
     <title>{title}</title>
   </head>
   <body>

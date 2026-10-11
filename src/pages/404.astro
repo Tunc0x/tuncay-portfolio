@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { withBase } from '../utils/paths';
 ---
 
 <Layout title="Page not found — Tuncay Ünal">
@@ -13,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
     <p style="margin-top:25px">
       That page isn’t here. My work is just one click away.
     </p>
-    <a class="button button-primary" href="/">
+    <a class="button button-primary" href={withBase('/')}>
       Back to the portfolio <span aria-hidden="true">↗</span>
     </a>
   </main>

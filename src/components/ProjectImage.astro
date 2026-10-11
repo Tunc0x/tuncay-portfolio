@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../utils/paths';
 interface Props {
   image: { src: string; srcset: string; width: number; height: number };
   alt: string;
@@ -20,8 +21,11 @@ const {
 <figure class:list={['project-media', className]}>
   <div class="media-frame">
     <img
-      src={image.src}
-      srcset={image.srcset}
+      src={withBase(image.src)}
+      srcset={image.srcset
+        .split(',')
+        .map((source) => withBase(source.trim()))
+        .join(', ')}
       sizes={sizes}
       width={image.width}
       height={image.height}
@@ -37,7 +41,7 @@ const {
     </div>
     <a
       class="media-enlarge"
-      href={image.src}
+      href={withBase(image.src)}
       target="_blank"
       rel="noopener"
       aria-label={`View full-size image: ${alt} (opens in a new tab)`}

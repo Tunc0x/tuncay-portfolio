@@ -2,6 +2,7 @@
 import ProjectImage from './ProjectImage.astro';
 import ProjectVideo from './ProjectVideo.astro';
 import media from '../data/project-media.json';
+import { withBase } from '../utils/paths';
 const conditions = [
   {
     key: 'street',
@@ -61,7 +62,7 @@ const conditions = [
       </div>
       <img
         class="dossier-preview"
-        src={media.spot.src}
+        src={withBase(media.spot.src)}
         width="1178"
         height="1020"
         alt=""
@@ -133,7 +134,7 @@ const conditions = [
       </div>
       <img
         class="dossier-preview"
-        src={media['bend-arena'].src}
+        src={withBase(media['bend-arena'].src)}
         width="1174"
         height="637"
         alt=""
@@ -215,7 +216,7 @@ const conditions = [
       </div>
       <img
         class="dossier-preview"
-        src={media['street-trees'].src}
+        src={withBase(media['street-trees'].src)}
         width="1120"
         height="595"
         alt=""

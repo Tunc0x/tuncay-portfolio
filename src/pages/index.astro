@@ -7,6 +7,7 @@ import ProjectImage from '../components/ProjectImage.astro';
 import ProjectVideo from '../components/ProjectVideo.astro';
 import FurtherWork from '../components/FurtherWork.astro';
 import media from '../data/project-media.json';
+import { withBase } from '../utils/paths';
 const linkedin = 'https://www.linkedin.com/in/tuncay-%C3%BCnal-4562b6182/';
 const capabilities = [
   {
@@ -255,7 +256,7 @@ const capabilities = [
               task progression, evaluation and recovery, then studied how
               progressively revealing a concept map changed the experience.
             </p>
-            <a class="inline-link" href="/Tuncay_Unal_Resume.pdf">
+            <a class="inline-link" href={withBase('/Tuncay_Unal_Resume.pdf')}>
               Read the research summary in my CV{' '}
               <span aria-hidden="true">↗</span>
             </a>
@@ -525,7 +526,11 @@ const capabilities = [
             taken me from aviation training and maritime research to full-stack
             applications and event-driven backends.
           </p>
-          <a class="inline-link" href="/Tuncay_Unal_Resume.pdf" download>
+          <a
+            class="inline-link"
+            href={withBase('/Tuncay_Unal_Resume.pdf')}
+            download
+          >
             Download my résumé <span aria-hidden="true">↓</span>
           </a>
         </div>
@@ -612,7 +617,7 @@ const capabilities = [
           <a href="https://github.com/Tunc0x">
             GitHub <span aria-hidden="true">↗</span>
           </a>
-          <a href="/Tuncay_Unal_Resume.pdf">
+          <a href={withBase('/Tuncay_Unal_Resume.pdf')}>
             Résumé <span aria-hidden="true">↗</span>
           </a>
         </div>

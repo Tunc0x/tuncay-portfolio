@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../utils/paths';
 interface Props {
   id: string;
   title: string;
@@ -26,12 +27,12 @@ const {
       muted
       width={width}
       height={height}
-      poster={`/media/${id}-poster.webp`}
+      poster={withBase(`/media/${id}-poster.webp`)}
       aria-label={title}
       aria-describedby={`${id}-description`}
     >
-      <source src={`/media/${id}.mp4`} type="video/mp4" />
-      <a href={`/media/${id}.mp4`}>Watch {title}</a>
+      <source src={withBase(`/media/${id}.mp4`)} type="video/mp4" />
+      <a href={withBase(`/media/${id}.mp4`)}>Watch {title}</a>
     </video>
   </div>
   <figcaption id={`${id}-description`}>
@@ -41,7 +42,7 @@ const {
     </div>
     <a
       class="media-enlarge"
-      href={`/media/${id}.mp4`}
+      href={withBase(`/media/${id}.mp4`)}
       target="_blank"
       rel="noopener"
       aria-label={`Open ${title} video in a new tab`}
