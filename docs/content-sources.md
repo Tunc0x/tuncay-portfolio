@@ -24,7 +24,7 @@ The supplied `Tuncay_Uenal_Resume (1).pdf`, included as `public/Tuncay_Unal_Resu
 - Lufthansa Technik thesis: Jan–Aug 2026; 24 participants; +19.38 mean SUS points for progressive disclosure versus full visibility; 9 instructional sections; 2 construction tasks; 4,700+ telemetry events.
 - Lufthansa Technik internship: Sep–Nov 2025; deployed VR training and reusable VR Builder components.
 - Fraunhofer CML: Nov 2023–Feb 2025; Unity/C#, maritime and robotics R&D, WebAR viewer.
-- OpsReplay: 9 API endpoints, 30+ API tests, 2 background processes.
+- OpsReplay: shown as capability labels (verified idempotent webhook ingestion, incident lifecycle with change context, evidence-grounded versioned postmortems) rather than counts, so the card does not go stale.
 - Scheduler: 3 views, 3 REST mutation operations, 7 validated request fields, 3 related Supabase tables.
 
 The portfolio does not use employer headcounts as personal accomplishments, infer skill proficiency percentages or fabricate years of technology experience.
@@ -44,7 +44,7 @@ The portfolio does not use employer headcounts as personal accomplishments, infe
 
 ## Presentation boundaries
 
-- OpsReplay's implemented diagram describes GitHub push ingestion. Additional integrations, incident workflows and postmortem generation are labelled in development.
+- OpsReplay's diagram illustrates the GitHub push ingestion path. The card copy covers the wider implemented backend: alert ingestion, incidents and grounded postmortems. The product UI is in progress.
 - Scheduler preview uses illustrative appointments, contains no patient records, performs no network mutations and links to the original live project.
 - The concept map is an illustration of progressive disclosure, not the original experiment interface or safety-training instructions.
 - The spatial lab is an original coordinate-frame demonstration of marker-relative positioning, not a screenshot or replica of Fraunhofer's implementation.

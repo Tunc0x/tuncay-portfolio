@@ -144,7 +144,7 @@ const capabilities = [
       <article class="project project-ops" id="opsreplay">
         <div class="project-top">
           <span class="mono">01 / BACKEND & DISTRIBUTED SYSTEMS</span>
-          <span class="project-status">In development</span>
+          <span class="project-status">Backend implemented</span>
         </div>
         <div class="project-intro">
           <h3>
@@ -154,24 +154,18 @@ const capabilities = [
             <h4>See what changed before production broke.</h4>
             <p>
               A release and incident intelligence product for small engineering
-              teams. The implemented core turns GitHub push webhooks into
-              chronological repository timelines, preserving where every event
-              came from.
+              teams. It turns GitHub and alert webhooks into evidence-linked
+              timelines, opens incidents from alerts, and drafts postmortems
+              grounded in what actually changed.
             </p>
           </div>
         </div>
         <Pipeline client:visible={{ rootMargin: '400px' }} />
         <div class="project-bottom">
           <div class="project-evidence">
-            <span>
-              <strong>9</strong> API endpoints
-            </span>
-            <span>
-              <strong>30+</strong> automated API tests
-            </span>
-            <span>
-              <strong>2</strong> background processes
-            </span>
+            <span>Verified, idempotent webhook ingestion</span>
+            <span>Incident lifecycle with change context</span>
+            <span>Evidence-grounded, versioned postmortems</span>
           </div>
           <div class="project-links">
             <a href="https://github.com/Tunc0x/opsreplay">
@@ -183,11 +177,8 @@ const capabilities = [
           </div>
         </div>
         <div class="project-colophon">
-          <p>Python / FastAPI / PostgreSQL / AWS SQS / React / TypeScript</p>
-          <p>
-            More integrations, incident workflows and evidence-backed
-            postmortems are in development.
-          </p>
+          <p>Python / FastAPI / PostgreSQL / AWS SQS / OpenAI / Docker</p>
+          <p>Product UI in progress.</p>
         </div>
       </article>
 
