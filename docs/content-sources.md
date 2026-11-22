@@ -31,6 +31,8 @@ The portfolio does not use employer headcounts as personal accomplishments, infe
 
 ## Repository evidence
 
+- HairNow is a team project. The booking provider and its commit history credit Tuncay with adding the per-minute overlap check and writing the temporary locks and pending request in one Firestore transaction. The demo role-switching commit also credits Tuncay. The two screenshots use seeded data from the [public demo](https://hairnow-demo.web.app/).
+
 - <https://github.com/Tunc0x/opsreplay/blob/main/README.md>
 - <https://github.com/Tunc0x/opsreplay/blob/main/backend/app/routers/github_webhook.py>
   - HMAC verification, delivery deduplication, atomic delivery/outbox transaction.

@@ -19,3 +19,7 @@ Included: master's application capture; two WebAR states; Spot photograph; exerg
 H.264, yuv420p, 30 fps, MP4 fast-start. The clips have no audio tracks; visible descriptions convey the relevant action. Native playback controls, inline playback, no autoplay, and no media preloading are intentional. Small WebP posters are provided. The largest file is about 4.62 MiB, below Pages' 25 MiB per-file limit. All responsive image variants and posters together are about 1.2 MB; the entire curated media directory is about 12.6 MB.
 
 To replace a capture, generate appropriately sized WebP variants, update the manifest and caption together, and inspect the actual project context. To replace a clip, retain a short useful excerpt, generate a matching poster, update the duration/description and verify native playback before publishing. Do not place raw source archives or private supporting documents in `public/`.
+
+## HairNow
+
+The two November 2026 captures come from the public HairNow demo with sample data. The first crop shows the customer’s service menu through the Classic Cut. The second shows a pending Classic Cut in the employee inbox. They show the two sides of a request without publishing a customer record. Each crop has 320px and 430px WebP variants. The role-selection screen and older repository imagery added no booking detail.

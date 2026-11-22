@@ -6,6 +6,7 @@ import SpatialLab from '../components/SpatialLab.astro';
 import ProjectImage from '../components/ProjectImage.astro';
 import ProjectVideo from '../components/ProjectVideo.astro';
 import FurtherWork from '../components/FurtherWork.astro';
+import HairNow from '../components/HairNow.astro';
 import media from '../data/project-media.json';
 import { withBase } from '../utils/paths';
 const linkedin = 'https://www.linkedin.com/in/tuncay-%C3%BCnal-4562b6182/';
@@ -125,7 +126,7 @@ const capabilities = [
           </p>
         </div>
         <span class="mono heading-aside">
-          FOUR PERSPECTIVES
+          FIVE PERSPECTIVES
           <br />
           ON ENGINEERING
         </span>
@@ -134,6 +135,7 @@ const capabilities = [
       <nav class="work-index" aria-label="Project index">
         <a href="#opsreplay">OpsReplay</a>
         <a href="#scheduler">Scheduler</a>
+        <a href="#hairnow">HairNow</a>
         <a href="#learning">AI learning</a>
         <a href="#spatial">WebAR</a>
         <a href="#dior">DIOR IT</a>
@@ -226,9 +228,11 @@ const capabilities = [
         </div>
       </article>
 
+      <HairNow />
+
       <article class="project project-learning" id="learning">
         <div class="project-top">
-          <span class="mono">03 / AI, INTERACTION & RESEARCH</span>
+          <span class="mono">04 / AI, INTERACTION & RESEARCH</span>
           <span class="project-status">
             Lufthansa Technik · Master’s thesis
           </span>
@@ -325,7 +329,7 @@ const capabilities = [
 
       <article class="project project-spatial" id="spatial">
         <div class="project-top">
-          <span class="mono">04 / REAL-TIME 3D & WEBAR</span>
+          <span class="mono">05 / REAL-TIME 3D & WEBAR</span>
           <span class="project-status">Fraunhofer CML</span>
         </div>
         <div class="split-project">

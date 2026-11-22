@@ -1,0 +1,84 @@
+---
+import media from '../data/project-media.json';
+import ProjectImage from './ProjectImage.astro';
+
+const sizes =
+  '(max-width: 600px) min(430px, 100vw - 40px), (max-width: 1000px) 44vw, 430px';
+---
+
+<article class="project" id="hairnow" aria-labelledby="hairnow-title">
+  <div class="project-top">
+    <span class="mono">03 / MOBILE & FULL-STACK ENGINEERING</span>
+    <span class="project-status">Team project</span>
+  </div>
+  <div class="project-intro">
+    <h3 id="hairnow-title">HairNow</h3>
+    <div>
+      <h4>From the service menu to the stylist’s inbox.</h4>
+      <p>
+        In HairNow, customers choose a service, a stylist and a time. The
+        stylist can then confirm or decline the request. I built the overlap
+        check and added role switching to the demo so you can try the customer,
+        employee and salon owner views in one workspace.
+      </p>
+      <a class="inline-link" href="https://hairnow-demo.web.app/">
+        Try the HairNow demo <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+  <div class="hairnow-views">
+    <ProjectImage
+      image={media['hairnow-services']}
+      alt="HairNow’s service menu lists a 20-minute Beard Trim and a 45-minute Classic Cut."
+      label="CUSTOMER / CHOOSE A SERVICE"
+      caption="The service determines how much time to reserve with the stylist."
+      sizes={sizes}
+    />
+    <div>
+      <ProjectImage
+        image={media['hairnow-request']}
+        alt="The employee inbox shows a Classic Cut from 11:00 to 11:45 with Confirm and Decline controls."
+        label="EMPLOYEE / REVIEW A REQUEST"
+        caption="A sample Classic Cut arrives in the inbox with its start and end time."
+        sizes={sizes}
+      />
+      <div class="engineering-note">
+        <h5>When two requests overlap</h5>
+        <p>
+          An 11:30 trim would overlap that 11:00 cut. My booking logic checks a
+          temporary lock for each minute of the stylist’s time. If the interval
+          is free, one Firestore transaction writes the locks and the
+          appointment request together.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="project-colophon">
+    <p>Flutter / Dart / Firebase Authentication / Cloud Firestore</p>
+    <p>Live demo captures · Sample booking data</p>
+  </div>
+</article>
+
+<style>
+  .hairnow-views {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 430px));
+    justify-content: center;
+    gap: clamp(24px, 6vw, 80px);
+    margin-bottom: 40px;
+  }
+  .engineering-note h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .engineering-note p {
+    line-height: 1.75;
+  }
+  @media (max-width: 600px) {
+    .hairnow-views {
+      grid-template-columns: minmax(0, 430px);
+      gap: 28px;
+    }
+  }
+</style>
