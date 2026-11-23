@@ -155,10 +155,10 @@ const capabilities = [
           <div>
             <h4>See what changed before production broke.</h4>
             <p>
-              A release and incident intelligence product for small engineering
-              teams. It turns GitHub and alert webhooks into evidence-linked
-              timelines, opens incidents from alerts, and drafts postmortems
-              grounded in what actually changed.
+              OpsReplay helps engineering teams understand what changed before
+              an incident. It turns GitHub events and monitoring alerts into
+              evidence-linked timelines, creates incident records from alerts,
+              and drafts postmortems based on the available evidence.
             </p>
           </div>
         </div>
@@ -199,15 +199,15 @@ const capabilities = [
             <h4>Patient Appointment Scheduler</h4>
             <p>
               A full-stack scheduling prototype with month, week and list views.
-              Relational queries keep appointments, patients and categories
-              connected. URL-based state keeps the current view and filters
-              intact across reloads.
+              A relational data model links appointments to patients and
+              appointment categories. URL-based state keeps the current view and
+              filters intact across reloads.
             </p>
             <div class="engineering-note">
               <span class="mono">THE ENGINEERING DETAIL</span>
               <p>
-                Three REST mutation operations, seven validated request fields,
-                and privileged Supabase writes kept on the server.
+                Appointment changes go through validated API endpoints, while
+                privileged Supabase operations stay on the server.
               </p>
             </div>
             <a class="inline-link" href="https://vocare-scheduler.vercel.app/">
@@ -247,9 +247,10 @@ const capabilities = [
             <h4>AI-supported cabin safety learning</h4>
             <p>
               A real-time VR learning system combining speech recognition,
-              conversational tutoring, speech synthesis and visual cues. I built
-              task progression, evaluation and recovery, then studied how
-              progressively revealing a concept map changed the experience.
+              conversational tutoring, speech synthesis and visual cues. I
+              implemented task progression, assessment logic and error recovery,
+              then evaluated how revealing a concept map step by step affected
+              learning, usability and cognitive load.
             </p>
             <a class="inline-link" href={withBase('/Tuncay_Unal_Resume.pdf')}>
               Read the research summary in my CV{' '}
@@ -288,10 +289,9 @@ const capabilities = [
                   record the interaction.
                 </p>
                 <p class="dossier-note">
-                  The study compared progressive disclosure with full map
-                  visibility. The supplied research video reports no significant
-                  condition effect on post-test knowledge after accounting for
-                  pre-test scores.
+                  I compared progressive disclosure with full map visibility.
+                  After accounting for participants' prior knowledge, neither
+                  approach led to significantly better learning outcomes.
                 </p>
               </div>
             </div>
@@ -618,8 +618,7 @@ const capabilities = [
         </div>
       </div>
       <p class="work-note">
-        Open to software engineering opportunities · UK Skilled Worker
-        sponsorship required
+        Open to software engineering opportunities · Based in Hamburg, Germany
       </p>
     </section>
   </main>
