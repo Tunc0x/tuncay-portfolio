@@ -22,4 +22,4 @@ To replace a capture, generate appropriately sized WebP variants, update the man
 
 ## HairNow
 
-The two November 2026 captures come from the public HairNow demo with sample data. The first crop shows the customer’s service menu through the Classic Cut. The second shows a pending Classic Cut in the employee inbox. They show the two sides of a request without publishing a customer record. Each crop has 320px and 430px WebP variants. The role-selection screen and older repository imagery added no booking detail.
+The two November 2026 captures come from the public HairNow demo in dark mode with sample data. The first crop shows the customer’s service menu through the Classic Cut. The second shows a pending Classic Cut in the employee inbox. Each capture has 320px and 430px WebP variants. The full-size service menu is 645px wide and the full-size employee inbox is 752px wide.
