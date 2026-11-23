@@ -102,7 +102,7 @@ export function Pipeline() {
           <p>{stages[active].detail}</p>
         </div>
         <button className="small-button" onClick={replay} disabled={running}>
-          {running ? 'Replaying…' : 'Replay an event'}
+          {running ? 'Replaying…' : 'Walk through the pipeline'}
           <span aria-hidden="true">↻</span>
         </button>
       </div>
