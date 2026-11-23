@@ -23,7 +23,7 @@ const stages = [
     name: 'Process',
     label: 'Background worker',
     detail:
-      'The worker normalises GitHub push activity into timeline events with source-event provenance.',
+      'The worker turns GitHub push activity into timeline events, each linked to its original source.',
   },
   {
     name: 'Commit',
